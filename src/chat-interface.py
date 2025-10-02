@@ -14,15 +14,15 @@ def spinner(msg, duration=2):
     sys.stdout.write("\r" + " " * (len(msg) + 2) + "\r")  # clear line
 
 def main():
-    print("💬 Shoplite RAG Chat Interface")
-    base_url = input("🔗 Enter your ngrok URL (from Cell 8): ").strip()
+    print(" Shoplite RAG Chat Interface")
+    base_url = input(" Enter your ngrok URL (from Cell 8): ").strip()
     if not base_url.startswith("http"):
         print("uhoh! Invalid URL. It should look like https://xxxx.ngrok-free.app")
         sys.exit(1)
 
-    print("\n✅ Connected! Type 'exit' to quit.")
-    print("💡 Switch prompt type: /prompt <name>")
-    print("   Available: base_retrieval_prompt, multi_doc_prompt, clarification_prompt, concise_citation\n")
+    print("\n Connected! Type 'exit' to quit.")
+    print(" Switch prompt type: /prompt <name>")
+    print(" Available: base_retrieval_prompt, multi_doc_prompt, clarification_prompt, concise_citation\n")
 
     current_prompt = "base_retrieval_prompt"
 
@@ -43,9 +43,9 @@ def main():
                 
             ]:
                 current_prompt = chosen
-                print(f"✅ Prompt type switched to: {current_prompt}\n")
+                print(f" Prompt type switched to: {current_prompt}\n")
             else:
-                print("❌ Invalid prompt. Try again.\n")
+                print(" Invalid prompt. Try again.\n")
             continue
 
         try:
@@ -71,10 +71,10 @@ def main():
                     print("📚 Sources:", data["sources"])
                 print()
             else:
-                print(f"❌ Error {r.status_code}: {r.text}\n")
+                print(f" Error {r.status_code}: {r.text}\n")
 
         except Exception as e:
-            print("❌ Request failed:", str(e))
+            print(" Request failed:", str(e))
 
 if __name__ == "__main__":
     main()
