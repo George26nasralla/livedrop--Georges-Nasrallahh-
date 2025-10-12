@@ -1,0 +1,122 @@
+[
+  {
+    "qid": "Q01",
+    "category": "Account",
+    "question": "How do I create a user account on Shoplite?",
+    "answer": "To create a Shoplite account, users must visit the registration page and provide their valid email or phone number, create a strong password, and enter basic profile information."
+  },
+  {
+    "qid": "Q02",
+    "category": "Search",
+    "question": "What criteria are my search result filtering based on for my product search?",
+    "answer": "Users can filter products by price range, brand, customer rating, seller type (individual or verified business), and estimated delivery time."
+  },
+  {
+    "qid": "Q03",
+    "category": "Search",
+    "question": "Can I narrow down product choices?",
+    "answer": "Filters can be combined to narrow down choices, ensuring customers see the most relevant products."
+  },
+  {
+    "qid": "Q04",
+    "category": "Cart",
+    "question": "Can I add multiple items from different sellers into a single cart?",
+    "answer": "Buyers are allowed to add multiple items from different sellers into a single cart, making it easier to complete transactions without switching between pages."
+  },
+  {
+    "qid": "Q05",
+    "category": "Payment",
+    "question": "Can I pay via Whish Money?",
+    "answer": "Supported methods include major credit and debit cards, PayPal, and digital wallets such as Apple Pay, Whish Money and Google Pay."
+  },
+  {
+    "qid": "Q06",
+    "category": "Payment",
+    "question": "Is the payment on Shoplite secure?",
+    "answer": "Shoplite employs end-to-end encryption and complies with PCI-DSS standards to safeguard sensitive financial data."
+  },
+  {
+    "qid": "Q07",
+    "category": "Refunds",
+    "question": "How much time does it take to get a refund?",
+    "answer": "Refunds are typically issued to the original payment method within 5–7 business days after the return is approved by the dispute resolution committee."
+  },
+  {
+    "qid": "Q08",
+    "category": "Support",
+    "question": "What if I receive a defective product?",
+    "answer": "When issues arise between buyers and sellers—such as undelivered items, defective products, or mismatched descriptions—Shoplite's dispute resolution process comes into play to solve the problem."
+  },
+  {
+    "qid": "Q09",
+    "category": "Returns",
+    "question": "What are Shoplite's return policies and how can customers track their orders?",
+    "answer": "Shoplite provides a 30-day return window, requiring a return authorization through the user dashboard. Refunds are processed within 5–7 business days after inspection. Customers can track order status via the tracking dashboard, which provides real-time shipment updates and estimated delivery dates."
+  },
+  {
+    "qid": "Q10",
+    "category": "Sellers",
+    "question": "How can sellers manage their inventory while promoting their products effectively?",
+    "answer": "Sellers can manage stock levels, set alerts for low inventory, and use bulk upload tools through the Seller Dashboard. To promote products, they can run sponsored ads, homepage banners, and discount campaigns scheduled in advance. Analytics in Ads Manager allow sellers to optimize based on stock availability and campaign performance."
+  },
+  {
+    "qid": "Q11",
+    "category": "Sellers",
+    "question": "What options do sellers have to withdraw earnings, and how are commission fees applied?",
+    "answer": "Sellers earn revenue from product sales. Every sale is followed by Shoplite's commission, which varies by category but is transparently shown in the Seller Dashboard. Funds can be withdrawn through linked bank accounts or PayPal once the balance reaches the minimum payout threshold."
+  },
+  {
+    "qid": "Q12",
+    "category": "Discovery",
+    "question": "How does Shoplite help buyers discover products through search and recommendations?",
+    "answer": "Buyers can filter by category, price, ratings, and seller location to refine searches. Shoplite also invests in AI-driven personalization, including recommendation engines that adapt to buyer behavior in real time, with plans to expand into voice search and AR previews."
+  },
+  {
+    "qid": "Q13",
+    "category": "Promotions",
+    "question": "How are promotional codes applied during checkout, and what discounts are available to sellers for campaigns?",
+    "answer": "Buyers can apply promotional codes directly at checkout, reducing the order total instantly. Sellers can create their own discount campaigns, including percentage-based promotions, BOGO deals, and flash sales. Campaigns can be scheduled and highlighted with promotional badges."
+  },
+  {
+    "qid": "Q14",
+    "category": "Delivery",
+    "question": "What customer support options are available if an order delivery fails?",
+    "answer": "Customers have access to real-time shipment tracking updates using the tracking dashboard. If delivery fails, they can contact customer support via live chat, email, or phone. Support agents can initiate return authorization or re-shipment depending on the issue."
+  },
+  {
+    "qid": "Q15",
+    "category": "Security",
+    "question": "How do sellers ensure compliance with Shoplite's security policies during account setup?",
+    "answer": "Sellers must verify their business with valid documentation such as a tax ID, which is reviewed within 2–3 business days. To comply with security, they must enable 2FA, agree to GDPR/CCPA data handling policies, and use secure payment methods."
+  },
+  {
+    "qid": "Q16",
+    "category": "Mobile",
+    "question": "How does the mobile app enhance the shopping experience while maintaining account security?",
+    "answer": "The Shoplite mobile app supports features like personalized recommendations, push notifications for deals, and barcode scanning for quick product search. Security is reinforced with biometric authentication, encrypted transactions, and activity alerts for suspicious logins."
+  },
+  {
+    "qid": "Q17",
+    "category": "Refunds",
+    "question": "How do refunds and commission fees interact when a customer returns a product?",
+    "answer": "When a customer returns a product within the 30-day return window and the refund is approved, Shoplite reverses the commission fee for that transaction. The seller does not incur permanent charges for refunded items, ensuring fairness."
+  },
+  {
+    "qid": "Q18",
+    "category": "Expansion",
+    "question": "How does Shoplite plan to expand globally while competing with Amazon, eBay, and Shopify?",
+    "answer": "Shoplite's expansion strategy includes multi-currency support, regional payment gateways, and international logistics. Unlike Amazon and eBay, Shoplite emphasizes fairness for small sellers and transparent commissions. Unlike Shopify, it combines storefront tools with a shared marketplace."
+  },
+  {
+    "qid": "Q19",
+    "category": "Privacy",
+    "question": "How does Shoplite balance product recommendation accuracy, data privacy, and future AI-driven personalization?",
+    "answer": "Shoplite's recommendation system uses collaborative filtering and purchase history to suggest relevant products. To protect user privacy, data is anonymized, encrypted, and processed under GDPR and CCPA regulations. In its future roadmap, Shoplite plans to expand personalization with AI-driven features such as predictive shopping lists and real-time preference adaptation while continuing to comply with global data protection standards."
+  },
+  {
+    "qid": "Q20",
+    "category": "Logistics",
+    "question": "How do Shoplite's logistics partners, commission policies, and customer communication channels work together during delayed deliveries?",
+    "answer": "If a delivery is delayed, Shoplite's logistics partners provide real-time tracking updates and escalation paths. While sellers are typically charged commission on completed sales, commission adjustments may be applied when delays significantly impact customer satisfaction. Throughout this process, customer support agents notify buyers through live chat, email, and phone to ensure transparency and maintain trust."
+  }
+]
