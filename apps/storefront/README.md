@@ -1,4 +1,5 @@
 # React + TypeScript + Vite
+//run instructions
 /install
 npm dev
 npm build

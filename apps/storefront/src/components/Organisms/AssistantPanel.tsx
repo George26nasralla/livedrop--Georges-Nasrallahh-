@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { getAssistantResponse } from '../../assistant/engine';
 import { AssistantHeader } from '../molecules/AssistantHeader';
 import { ChatMessageList } from '../molecules/ChatMessageList';
 import { ChatInput } from '../atoms/ChatInput';
@@ -9,6 +8,8 @@ interface Message {
   type: 'user' | 'assistant';
   content: string;
   citation?: string;
+  citations?: string[];  // ← ADD THIS for multiple citations
+  intent?: string;       // ← ADD THIS
   timestamp: Date;
 }
 
@@ -18,7 +19,14 @@ interface AssistantPanelProps {
 }
 
 export function AssistantPanel({ isOpen, onClose }: AssistantPanelProps) {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: '0',
+      type: 'assistant',
+      content: "Hi! I'm Alex from LiveDrop customer support. How can I help you today?",
+      timestamp: new Date()
+    }
+  ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,23 +45,34 @@ export function AssistantPanel({ isOpen, onClose }: AssistantPanelProps) {
     setIsLoading(true);
 
     try {
-      const response = await getAssistantResponse(input.trim());
-      
-      const assistantMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        type: 'assistant',
-        content: response.answer,
-        citation: response.citation,
-        timestamp: new Date()
-      };
+      // ✅ NEW: Call intelligent assistant API
+      const response = await fetch('http://localhost:5000/api/assistant/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: input.trim() })
+      });
 
-      setMessages(prev => [...prev, assistantMessage]);
+      const data = await response.json();
+      
+      if (data.success) {
+        const assistantMessage: Message = {
+          id: (Date.now() + 1).toString(),
+          type: 'assistant',
+          content: data.message,
+          citations: data.citations,  // ✅ Array of citations
+          intent: data.intent,        // ✅ Intent type
+          timestamp: new Date()
+        };
+        setMessages(prev => [...prev, assistantMessage]);
+      } else {
+        throw new Error(data.error);
+      }
     } catch (error) {
       console.error('Error getting response:', error);
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: 'Sorry, I encountered an error. Please try again.',
+        content: "I'm sorry, I'm having trouble right now. Please try again.",
         timestamp: new Date()
       };
       setMessages(prev => [...prev, errorMessage]);
@@ -63,7 +82,12 @@ export function AssistantPanel({ isOpen, onClose }: AssistantPanelProps) {
   };
 
   const clearChat = () => {
-    setMessages([]);
+    setMessages([{
+      id: '0',
+      type: 'assistant',
+      content: "Hi! I'm Alex from LiveDrop customer support. How can I help you today?",
+      timestamp: new Date()
+    }]);
   };
 
   return (

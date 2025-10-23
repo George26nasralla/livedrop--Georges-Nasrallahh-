@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import OrderTracking from '../components/OrderTracking';
 
 const statuses = ["Placed", "Packed", "Shipped", "Delivered"] as const;
 type StatusType = typeof statuses[number];
@@ -35,13 +36,14 @@ export function OrderStatusPage() {
       {/* Header */}
       <header className="p-6 bg-white bg-opacity-10 backdrop-blur-md border-b border-white border-opacity-20 flex justify-between items-center sticky top-0 z-10 shadow-lg">
         <div>
-          <h1 className="text-3xl font-bold text- tracking-tight drop-shadow-lg">
+          <h1 className="text-3xl font-bold text-black tracking-tight drop-shadow-lg">
             Order Confirmation
           </h1>
           <p className="text-white text-opacity-90 text-sm mt-1">
             Thank you for your purchase!
           </p>
         </div>
+          
         <Link
           to="/"
           className="bg-white text-purple-600 font-bold px-6 py-3 rounded-xl hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl hover:scale-105"
@@ -124,6 +126,9 @@ export function OrderStatusPage() {
             </div>
           </div>
         </div>
+
+        {/* Live Order Tracking Component */}
+        <OrderTracking orderId="68eff428fa4115dc255d46bb" />
 
         {/* Shipping Details */}
         {["Shipped", "Delivered"].includes(currentStatus) && (
